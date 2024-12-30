@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[Feedback]
+(
+	[FeedbackID] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, 
+    [Number] INT NOT NULL, 
+    [FirstName] NVARCHAR(15) NOT NULL, 
+    [LastName] NVARCHAR(15) NOT NULL, 
+    [Email] NVARCHAR(25) NOT NULL, 
+    [PhoneNumber] NVARCHAR(15) NOT NULL, 
+    [Message] NVARCHAR(MAX) NOT NULL, 
+    [FilePath1] NVARCHAR(255) NULL, 
+    [FilePath2] NVARCHAR(255) NULL, 
+    [FilePath3] NVARCHAR(255) NULL, 
+    [TimeFeedback] DATETIME NOT NULL DEFAULT GETDATE(), 
+    [Responded] BIT NOT NULL DEFAULT 0, 
+    [TimeResponded] DATETIME NULL
+)
